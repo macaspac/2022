@@ -1,0 +1,120 @@
+body {
+  font-family: 'Syne', sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+  font-weight: 400;
+  margin: 0 auto;
+  padding: 20px;
+
+}
+
+section {
+  font-size: 40px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 120px;
+}
+
+nav {
+  width: 100%;
+  position: fixed;
+  top: 20px;
+  right: 40px;
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+nav a {
+  color: #000000;
+  text-decoration: none;
+  margin-right: 20px;
+  text-transform: uppercase;
+  font-size: 40px;
+}
+
+.description {
+  width: 60%;
+  position: relative;
+}
+
+.description a {
+  font-family: 'Syne Tactile', cursive;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 42px;
+  color: #000;
+
+}
+
+.pixel-art {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  width: 300px;
+}
+
+sub, sup {
+  font-size: 20px;
+}
+
+.work {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.work h1 {
+  font-weight: 700;
+  font-size: 32px;
+  text-transform: uppercase;
+}
+
+.project-label {
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.project {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #333333;
+}
+
+.project-label {
+  font-size: 20px;
+}
+
+.project p {
+  width: 50%;
+}
+
+.project p:nth-child(3) {
+  text-align: right;
+  color: #999999;
+  width: 25%;
+}
+
+/* mobile */
+@media screen and (max-width: 768px) {
+    section {
+      font-size: 32px;
+    }
+
+    .description a {
+      font-size: 30px;
+    }
+
+    sub, sup {
+      font-size: 20px;
+    }
+
+    .description {
+      width: 100%;
+    }
+
+
+}
