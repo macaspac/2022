@@ -1,50 +1,53 @@
 body {
   font-family: 'Syne', sans-serif;
-	font-size: 16px;
-	line-height: 1.5;
+  font-size: 16px;
+  line-height: 1.5;
   font-weight: 400;
   margin: 0 auto;
   padding: 20px;
-
 }
 
+/*Typography*/
+a {
+  font-family: 'Syne Tactile', cursive;
+  text-decoration: none;
+  color: #000000;
+  letter-spacing: 0.05em;
+  font-size: 20px;
+}
+
+sub, sup {
+  font-size: 16px;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+p {
+  margin-top: 8px;
+}
+
+/*layout*/
 section {
-  font-size: 40px;
   display: flex;
   flex-direction: column;
-  padding-bottom: 120px;
-}
-
-nav {
+  padding-bottom: 80px;
+  font-size: 20px;
   width: 100%;
-  position: fixed;
-  top: 20px;
-  right: 40px;
-  display: flex;
-  justify-content: flex-end;
-
-}
-
-nav a {
-  color: #000000;
-  text-decoration: none;
-  margin-right: 20px;
-  text-transform: uppercase;
-  font-size: 40px;
 }
 
 .description {
-  width: 60%;
   position: relative;
-}
-
-.description a {
-  font-family: 'Syne Tactile', cursive;
-  text-decoration: none;
-  letter-spacing: 2px;
-  font-size: 42px;
-  color: #000;
-
 }
 
 .pixel-art {
@@ -52,69 +55,63 @@ nav a {
   bottom: 0px;
   right: 0px;
   width: 300px;
-}
+  }
 
-sub, sup {
-  font-size: 20px;
+.columns {
+  display: grid;
+  grid-auto-flow: row;
 }
 
 .work {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-}
-.work h1 {
-  font-weight: 700;
-  font-size: 32px;
-  text-transform: uppercase;
+  padding-bottom: 80px;
 }
 
-.project-label {
-  font-weight: 700;
-  font-size: 20px;
-  text-transform: uppercase;
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
-.project {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #333333;
+li {
+  border-bottom: 1px solid #ccc;
+  padding: 12px 0;
 }
 
-.project-label {
-  font-size: 20px;
-}
+/*Desktop*/
+@media screen and (min-width: 600px) {
+  /*Typography*/
+  section {
+    font-size: 40px;
+  }
 
-.project p {
-  width: 50%;
-}
+  a {
+    font-size: 40px;
+  }
 
-.project p:nth-child(3) {
-  text-align: right;
-  color: #999999;
-  width: 25%;
-}
+  h1 {
+    font-size: 20px;
+  }
 
-/* mobile */
-@media screen and (max-width: 768px) {
-    section {
-      font-size: 32px;
-    }
+  .columns a {
+    font-size: 24px;
+  }
 
-    .description a {
-      font-size: 30px;
-    }
+  sub, sup {
+    font-size: 36px;
+  }
 
-    sub, sup {
-      font-size: 20px;
-    }
+  .description {
+    width: 75%;
+  }
 
-    .description {
-      width: 100%;
-    }
+  .columns {
+    grid-auto-flow: column;
+    gap: 20px;
+    font-size: 24px;
+  }
 
+  .pixel-art {
+    width: 350px;
+  }
 
 }
