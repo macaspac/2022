@@ -5,6 +5,7 @@ body {
   font-weight: 400;
   margin: 0 auto;
   padding: 20px;
+  cursor: url(cursor79.cur) 4 12, auto;
 }
 
 /*Typography*/
@@ -54,7 +55,7 @@ section {
   position: fixed;
   bottom: 0px;
   right: 0px;
-  width: 300px;
+  width: 250px;
   }
 
 .columns {
@@ -77,6 +78,65 @@ li {
   padding: 12px 0;
 }
 
+.links {
+  display: flex;
+  align-items: center;
+}
+
+.links img {
+  margin-right: 8px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+::-webkit-scrollbar:horizontal {
+  height: 17px;
+}
+
+::-webkit-scrollbar-corner {
+  background: #dfdfdf;
+}
+
+::-webkit-scrollbar-track {
+  background-image: url("icons/scrollbar-bg.svg");
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #dfdfdf;
+  box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #ffffff, inset -2px -2px #808080, inset 2px 2px #dfdfdf;
+}
+
+::-webkit-scrollbar-button:horizontal:start:decrement,
+::-webkit-scrollbar-button:horizontal:end:increment,
+::-webkit-scrollbar-button:vertical:start:decrement,
+::-webkit-scrollbar-button:vertical:end:increment {
+  display: block;
+}
+
+::-webkit-scrollbar-button:vertical:start {
+  height: 17px;
+  background-image: url('icons/button-up.svg');
+  background-size: cover;
+}
+::-webkit-scrollbar-button:vertical:end {
+  height: 17px;
+  background-image: url('icons/button-down.svg');
+  background-size: cover;
+}
+::-webkit-scrollbar-button:horizontal:start {
+  width: 16px;
+  background-image: url('icons/button-left.svg');
+  background-size: cover;
+}
+::-webkit-scrollbar-button:horizontal:end {
+  width: 16px;
+  background-image: url('icons/button-right.svg');
+  background-size: cover;
+}
+
 /*Desktop*/
 @media screen and (min-width: 600px) {
   /*Typography*/
@@ -97,21 +157,22 @@ li {
   }
 
   sub, sup {
-    font-size: 36px;
+    font-size: 24px;
   }
 
   .description {
-    width: 75%;
+    max-width: 920px;
   }
 
   .columns {
     grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
     font-size: 24px;
   }
 
   .pixel-art {
-    width: 350px;
+    width: 400px;
   }
 
 }
